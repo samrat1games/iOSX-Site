@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>iOSX — iOS experience for Android</title>
+<meta name="description" content="A one-tap installer that turns your Android into iOS, with the new Liquid Glass look.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230a84ff'/><g fill='white'><rect x='24' y='24' width='22' height='22' rx='7'/><rect x='54' y='24' width='22' height='22' rx='7'/><rect x='24' y='54' width='22' height='22' rx='7'/><rect x='54' y='54' width='22' height='22' rx='7'/></g></svg>">
+<style>
+  :root{
+    --bg:#000; --card:rgba(255,255,255,.06); --stroke:rgba(255,255,255,.12);
+    --label:#fff; --label2:#9a9aa2; --blue:#0a84ff;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,sans-serif;
+    color:var(--label);background:var(--bg);line-height:1.5;
+    background-image:
+      radial-gradient(60vw 60vw at 15% -10%,rgba(10,132,255,.25),transparent 60%),
+      radial-gradient(55vw 55vw at 100% 0%,rgba(191,90,242,.18),transparent 55%),
+      radial-gradient(60vw 60vw at 50% 120%,rgba(50,215,75,.14),transparent 60%);
+    background-attachment:fixed;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+  .glass{
+    background:var(--card);border:1px solid var(--stroke);border-radius:24px;
+    backdrop-filter:blur(26px) saturate(160%);-webkit-backdrop-filter:blur(26px) saturate(160%);
+  }
+  header{text-align:center;padding:72px 20px 40px}
+  .mark{width:92px;height:92px;border-radius:24px;margin:0 auto 22px;display:grid;place-items:center;
+    background:linear-gradient(160deg,#2b2b31,#0a0a0f);border:1px solid var(--stroke);
+    box-shadow:0 20px 60px rgba(10,132,255,.25)}
+  .mark svg{width:52px;height:52px}
+  h1{font-size:clamp(44px,12vw,88px);margin:0;letter-spacing:-.03em;font-weight:800}
+  .tag{color:var(--label2);font-size:clamp(16px,4.4vw,21px);margin:10px auto 0;max-width:30ch}
+  .cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:16px 30px;border-radius:999px;
+    background:var(--blue);color:#fff;text-decoration:none;font-weight:600;font-size:18px;
+    box-shadow:0 14px 40px rgba(10,132,255,.45);transition:transform .15s ease,filter .15s ease}
+  .cta:hover{transform:translateY(-2px);filter:brightness(1.07)}
+  .meta{color:var(--label2);font-size:13px;margin-top:14px}
+  section{padding:34px 0}
+  .apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:18px;padding:26px}
+  .app{text-align:center;font-size:12px;color:var(--label2)}
+  .tile{width:56px;height:56px;border-radius:15px;margin:0 auto 7px;display:grid;place-items:center;font-size:26px;
+    box-shadow:0 6px 16px rgba(0,0,0,.4)}
+  h2{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--label2);margin:0 0 14px;padding-left:6px}
+  .steps{display:grid;gap:14px}
+  .step{display:flex;gap:16px;align-items:flex-start;padding:20px}
+  .step .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--blue);display:grid;place-items:center;font-weight:700;font-size:15px}
+  .step h3{margin:0 0 4px;font-size:18px}
+  .step p{margin:0;color:var(--label2);font-size:14px}
+  .pill{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid var(--stroke);font-size:12px;color:var(--label2);margin-right:6px}
+  footer{text-align:center;color:var(--label2);font-size:13px;padding:46px 20px 60px}
+  footer a{color:var(--blue);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="#fff">
+        <rect x="22" y="22" width="24" height="24" rx="8"/><rect x="54" y="22" width="24" height="24" rx="8"/>
+        <rect x="22" y="54" width="24" height="24" rx="8"/><rect x="54" y="54" width="24" height="24" rx="8"/>
+      </g></svg>
+    </div>
+    <h1>iOSX</h1>
+    <p class="tag">The iOS experience for Android — with the new Liquid Glass look.</p>
+    <a class="cta" href="https://github.com/samrat1games/iOSX-Site/releases/latest/download/iOSX-Installer.apk">
+      ↓ Download APK
+    </a>
+    <div class="meta">v2.0.0 · ~310 MB · Android 10+ · signed</div>
+  </header>
+
+  <section>
+    <div class="glass apps">
+      <div class="app"><div class="tile" style="background:#fa2d48">🎵</div>Music</div>
+      <div class="app"><div class="tile" style="background:#ff9500">±</div>Calculator</div>
+      <div class="app"><div class="tile" style="background:#ff3b30">📅</div>Calendar</div>
+      <div class="app"><div class="tile" style="background:#8e8e93">📷</div>Camera</div>
+      <div class="app"><div class="tile" style="background:#34c759">👤</div>Contacts</div>
+      <div class="app"><div class="tile" style="background:#32ade6">🖼️</div>Photos</div>
+      <div class="app"><div class="tile" style="background:#34c759">💬</div>Messages</div>
+      <div class="app"><div class="tile" style="background:#1c1c1e">🪪</div>Wallet</div>
+      <div class="app"><div class="tile" style="background:#32d74b">🏃</div>Fitness</div>
+      <div class="app"><div class="tile" style="background:#0a84ff">🛍️</div>App Store</div>
+      <div class="app"><div class="tile" style="background:#5856d6">🔒</div>Lock</div>
+      <div class="app"><div class="tile" style="background:#007aff">🏠</div>Home</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How to install</h2>
+    <div class="steps">
+      <div class="glass step">
+        <div class="n">1</div>
+        <div><h3>Download &amp; open</h3><p>Grab the APK above and open it. Allow install from unknown sources if your phone asks.</p></div>
+      </div>
+      <div class="glass step">
+        <div class="n">2</div>
+        <div><h3>Pick a method</h3>
+          <p><span class="pill">Root</span>Magisk / KernelSU / APatch — silent, no prompts.&nbsp;
+             <span class="pill">Shizuku</span>No root needed, just start the Shizuku service.</p></div>
+      </div>
+      <div class="glass step">
+        <div class="n">3</div>
+        <div><h3>Tap Install</h3><p>iOSX sets up the home screen, apps and lock screen, and makes them your defaults. Done.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Thanks to <b>Best iOS Mods</b> and <b>iMods</b> for the app.<br>
+    <a href="https://github.com/samrat1games/iOSX-Site">Source on GitHub</a>
+  </footer>
+
+</div>
+</body>
+</html>
